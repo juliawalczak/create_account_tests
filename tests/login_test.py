@@ -17,4 +17,4 @@ class TestLogIn:
         my_account_page.open_page()
         my_account_page.log_in("testeroprogramowaniapython@gmail.com", "testeroprogramowaniapython123")
 
-        assert "ERROR: Incorect username or password." in my_account_page.get_error_msg()
+        assert "ERROR: Incorrect username or password." in my_account_page.get_error_msg()
