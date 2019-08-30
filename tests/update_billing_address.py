@@ -2,10 +2,13 @@ from pages.billing_address_page import BillingAddressPage
 from pages.my_account_page import MyAccountPage
 import pytest
 import random
+import allure
 
 @pytest.mark.usefixtures("setup")
 class TestUpdateBillingAddress:
 
+    @allure.title("Test: update billing address")
+    @allure.description("Inputting billing address. Checking if a message about saving the address appears")
     def test_update_billing_address(self):
         email = str(random.randint(0, 10000)) + "testeroprogramowaniapython@gmail.com"
         my_account_page = MyAccountPage(self.driver)
